@@ -1,0 +1,21 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  acrName: 'acraesit'
+  imageName: 'hello-world'
+  tag: 'v1'
+
+steps:
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'ADO-dockerimage'
+    scriptType: bash
+    scriptLocation: inlineScript
+    inlineScript: |
+      az acr login --name $acrName
+      docker build -t $acraesit.azurecr.io/hello-world:v1 .
+      docker push $acraesit.azurecr.io/hello-world:v1 
