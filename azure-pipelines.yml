@@ -6,13 +6,13 @@ pool:
 
 variables:
   acrName: 'acraesit'
-  imageName: 'hello-world'
+  imageName: 'hello-world2'
   tag: 'v1'
 
 steps:
 - task: AzureCLI@2
   inputs:
-    azureSubscription: 'ADO-dockerimage'
+    azureSubscription: 'acr-image-sit'
     scriptType: bash
     scriptLocation: inlineScript
     inlineScript: |
