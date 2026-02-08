@@ -16,6 +16,6 @@ steps:
     scriptType: bash
     scriptLocation: inlineScript
     inlineScript: |
-      az acr login --name acraesit
+      az acr login --name acraetest
       docker build -t acraetest.azurecr.io/hello-world:v1 .
       docker push acraetest.azurecr.io/hello-world:v1 
