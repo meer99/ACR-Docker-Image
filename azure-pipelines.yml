@@ -15,7 +15,7 @@ steps:
     azureSubscription: 'acr-image-sit'
     scriptType: bash
     scriptLocation: inlineScript
-    inlineScript: |
+    inlineScript:
       az acr login --name acraetest
       docker build -t acraetest.azurecr.io/hello-world:v1 .
       docker push acraetest.azurecr.io/hello-world:v1 
