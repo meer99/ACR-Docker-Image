@@ -6,16 +6,16 @@ pool:
 
 variables:
   acrName: 'acraetest'
-  imageName: 'hello-world5'
+  imageName: 'hello-world50'
   tag: 'v1'
 
 steps:
 - task: AzureCLI@2
   inputs:
-    azureSubscription: 'acr-image-sit'
+    azureSubscription: 'ADO-dockerimage'
     scriptType: bash
     scriptLocation: inlineScript
     inlineScript: |
       az acr login --name acraetest
-      docker build -t acraetest.azurecr.io/hello-world:v1 .
-      docker push acraetest.azurecr.io/hello-world:v1 
+      docker build -t acraetest.azurecr.io/hello-world50:v1 .
+      docker push acraetest.azurecr.io/hello-world50:v1 
