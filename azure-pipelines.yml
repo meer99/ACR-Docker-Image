@@ -5,8 +5,8 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  acrName: 'acraesit'
-  imageName: 'hello-world2'
+  acrName: 'acraetest'
+  imageName: 'hello-world5'
   tag: 'v1'
 
 steps:
@@ -17,5 +17,5 @@ steps:
     scriptLocation: inlineScript
     inlineScript: |
       az acr login --name acraesit
-      docker build -t acraesit.azurecr.io/hello-world:v1 .
-      docker push acraesit.azurecr.io/hello-world:v1 
+      docker build -t acraetest.azurecr.io/hello-world:v1 .
+      docker push acraetest.azurecr.io/hello-world:v1 
