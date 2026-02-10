@@ -1,0 +1,1 @@
+// Content for managed-identity.bicep

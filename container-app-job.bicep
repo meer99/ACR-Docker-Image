@@ -1,0 +1,1 @@
+// Content for container-app-job.bicep

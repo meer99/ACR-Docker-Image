@@ -1,0 +1,1 @@
+// Content for private-dns-zone.bicep
